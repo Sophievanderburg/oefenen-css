@@ -1,0 +1,530 @@
+* {
+  font-family: helvetica;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+ul {
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ul li {
+  border-radius: 15px;
+  list-style-type: none;
+  background-color: #35314b;
+  width: 25%;
+  height: 200px;
+  max-width: 300px;
+  padding: 1.5em;
+  margin-bottom: 1em;
+
+  position: relative;
+}
+
+ul li {
+  color: white;
+}
+
+/* ----------------------------- li 1 -------------------------------*/
+ul li:first-of-type > div {
+  position: absolute;
+  top: 130px;
+  left: 80px;
+}
+
+ul li:first-of-type > div div {
+  position: absolute;
+  left: 2em;
+  bottom: 0;
+
+  width: 4px;
+  height: 40px;
+  background-color: transparent;
+
+  transform-origin: 50% 100%;
+  overflow: hidden;
+
+  transform: rotate(calc(30deg * var(--index))) translateY(-15px);
+}
+
+ul li:first-of-type > div div:nth-child(1) {
+  --index: 0;
+}
+
+ul li:first-of-type > div div:nth-child(2) {
+  --index: 1;
+}
+
+ul li:first-of-type > div div:nth-child(3) {
+  --index: 2;
+}
+
+ul li:first-of-type > div div:nth-child(4) {
+  --index: 3;
+}
+
+ul li:first-of-type > div div:nth-child(5) {
+  --index: 4;
+}
+
+ul li:first-of-type > div div:nth-child(6) {
+  --index: 5;
+}
+
+ul li:first-of-type > div div:nth-child(7) {
+  --index: 6;
+}
+
+ul li:first-of-type > div div:nth-child(8) {
+  --index: 7;
+}
+
+ul li:first-of-type > div div:nth-child(9) {
+  --index: 8;
+}
+
+ul li:first-of-type > div div:nth-child(10) {
+  --index: 9;
+}
+
+ul li:first-of-type > div div:nth-child(11) {
+  --index: 10;
+}
+
+ul li:first-of-type > div div:nth-child(12) {
+  --index: 11;
+}
+
+ul li:first-of-type > div div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  right: 0;
+
+  height: 40px;
+  background-color: #fbc70f;
+
+  animation: vuurwerk1 2s ease-in-out infinite;
+}
+
+@keyframes vuurwerk1 {
+  0% {
+    top: 100%;
+  }
+  33%,
+  100% {
+    top: -100%;
+  }
+}
+
+/* ----------------------------- li 2 -------------------------------*/
+ul li:nth-of-type(2) > div {
+  position: absolute;
+  top: 130px;
+  left: 80px;
+}
+
+ul li:nth-of-type(2) > div div {
+  position: absolute;
+  left: 2em;
+  bottom: 0;
+
+  width: 4px;
+  height: 40px;
+  background-color: transparent;
+
+  transform-origin: 50% 100%;
+  overflow: hidden;
+  border-radius: 50%;
+
+  transform: rotate(calc(30deg * var(--index))) translateY(-15px);
+}
+
+ul li:nth-of-type(2) > div div:nth-child(2n) {
+  height: 70px;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(1) {
+  --index: 0;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(2) {
+  --index: 1;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(3) {
+  --index: 2;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(4) {
+  --index: 3;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(5) {
+  --index: 4;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(6) {
+  --index: 5;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(7) {
+  --index: 6;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(8) {
+  --index: 7;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(9) {
+  --index: 8;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(10) {
+  --index: 9;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(11) {
+  --index: 10;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(12) {
+  --index: 11;
+}
+
+ul li:nth-of-type(2) > div div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  right: 0;
+
+  height: 40px;
+  background-color: #1cf476;
+
+  animation: vuurwerk2 2s ease-in-out infinite;
+}
+
+ul li:nth-of-type(2) > div div:nth-child(2n)::before {
+  background-color: #ffff00;
+  height: 100%;
+}
+
+@keyframes vuurwerk2 {
+  0% {
+    top: 100%;
+  }
+  33%,
+  100% {
+    top: -100%;
+  }
+}
+
+/* ----------------------------- li 3 -------------------------------*/
+ul li:nth-of-type(3) div {
+  position: abolsute;
+  left: 25%;
+  top: 50px;
+}
+
+/* shape van: https://css-tricks.com/the-shapes-of-css/*/
+ul li:nth-of-type(3) div div {
+  margin: 25px 0;
+  position: relative;
+  display: block;
+  color: #ffffc4;
+  width: 0px;
+  height: 0px;
+  border-right: 50px solid transparent;
+  border-bottom: 35px solid #ffffc4;
+  border-left: 50px solid transparent;
+
+  transform: rotate(35deg) scale(0);
+}
+
+ul li:nth-of-type(3) div div::before {
+  border-bottom: 40px solid #ffffc4;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -22.5px;
+  left: -32.5px;
+  display: block;
+  content: "";
+  transform: rotate(-35deg);
+}
+
+ul li:nth-of-type(3) div div::after {
+  position: absolute;
+  display: block;
+  color: #ffffc4;
+  top: 3px;
+  left: -52.5px;
+  width: 0px;
+  height: 0px;
+  border-right: 50px solid transparent;
+  border-bottom: 35px solid #ffffc4;
+  border-left: 50px solid transparent;
+  transform: rotate(-70deg);
+  content: "";
+}
+
+ul li:nth-of-type(3):hover div div {
+  animation-name: ster;
+  animation-iteration-count: infinite;
+  animation-duration: 1.25s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes ster {
+  0% {
+    transform: rotate(35deg) scale(0);
+  }
+  50% {
+    transform: rotate(35deg) scale(2);
+    opacity: 100%;
+  }
+  100% {
+    transform: rotate(35deg) scale(1.8);
+    opacity: 0%;
+  }
+}
+
+/* ----------------------------- li 4 -------------------------------*/
+ul li:nth-of-type(4) > div {
+  position: absolute;
+  top: 130px;
+  left: 90px;
+
+  animation: draaien 8s linear infinite;
+  transform-origin: 0px 0px;
+}
+
+ul li:nth-of-type(4) > div div {
+  position: absolute;
+  left: 2em;
+  bottom: 0;
+
+  width: 4px;
+  height: 70px;
+  background-color: transparent;
+
+  transform-origin: 50% 100%;
+  overflow: hidden;
+  border-radius: 2px;
+
+  transform: rotate(calc(30deg * var(--index))) translateY(-15px);
+}
+
+ul li:nth-of-type(4) > div div:nth-child(2n)::after {
+  content: "";
+  height: 10px;
+  width: 6px;
+  background-color: #35314b;
+
+  position: absolute;
+  top: 20px;
+  left: -2px;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(1) {
+  --index: 0;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(2) {
+  --index: 1;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(3) {
+  --index: 2;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(4) {
+  --index: 3;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(5) {
+  --index: 4;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(6) {
+  --index: 5;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(7) {
+  --index: 6;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(8) {
+  --index: 7;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(9) {
+  --index: 8;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(10) {
+  --index: 9;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(11) {
+  --index: 10;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(12) {
+  --index: 11;
+}
+
+ul li:nth-of-type(4) > div div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  right: 0;
+
+  height: 70px;
+  background-color: #1cf476;
+
+  animation: vuurwerk4 8s ease-in-out infinite;
+}
+
+ul li:nth-of-type(4) > div div:nth-child(2n)::before {
+  background-color: #ffff00;
+  height: 50%;
+}
+
+@keyframes draaien {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes vuurwerk4 {
+  0% {
+    top: 100%;
+  }
+  33%,
+  100% {
+    top: -100%;
+  }
+}
+
+/* ----------------------------- li 5 -------------------------------*/
+ul li:nth-of-type(5) > div {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  background-color: blue;
+  /*   overflow:hidden; */
+}
+
+ul li:nth-of-type(5) div::before {
+  content: "-----------";
+  color: transparent;
+  text-decoration-style: wavy;
+  text-decoration-color: yellow;
+  text-decoration-line: underline;
+
+  position: absolute;
+  top: -42px;
+  left: 0;
+  font-size: 4em;
+  /*   animation: wavy 2s linear infinite; */
+}
+
+@keyframes wavy {
+  0% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+/* ----------------------------- li 6 -------------------------------*/
+ul li:nth-of-type(6) {
+  position: relative;
+  overflow: hidden;
+}
+
+ul li:nth-of-type(6) div {
+  position: absolute;
+  bottom: 30%;
+  right: 50%;
+  /*   bottom:-30%; right:0; */
+  transform: rotate(-20deg);
+  width: 20px;
+  height: 70px;
+  background-color: red;
+
+  clip-path: polygon(
+    0 32%,
+    53% 0,
+    100% 32%,
+    80% 32%,
+    80% 100%,
+    20% 100%,
+    20% 32%
+  );
+}
+
+/* ul li:nth-of-type(6):hover div{
+    animation: schiet 2s ease-in-out infinite;
+  } */
+
+@keyframes schiet {
+  0% {
+    bottom: -30%;
+    right: 0;
+    transform: rotate(-20deg);
+  }
+  100% {
+    bottom: 60%;
+    right: 80%;
+    transform: rotate(-60deg);
+  }
+}
+
+ul li:nth-of-type(6) div::after {
+  /*   content:'';
+    position:absolute;
+    top:40%; left:0;
+    width:20px;
+    height: 70px;
+    
+    clip-path: polygon(0 32%, 53% 0, 100% 32%, 80% 32%, 80% 100%, 20% 100%, 20% 32%);
+    background-color:yellow; */
+
+  content: "Je hovert!";
+  color: #f06d06;
+  box-shadow: 0 0 5px grey;
+  background-color: white;
+
+  position: absolute;
+  top: -30%;
+  right: -50px;
+  height: auto;
+
+  padding: 0.5em;
+  border-radius: 3px;
+}
+
+ul li:nth-of-type(6) div {
+}
+
+ul li:nth-of-type(6) div::after {
+}
