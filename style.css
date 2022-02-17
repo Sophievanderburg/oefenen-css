@@ -429,43 +429,45 @@ ul li:nth-of-type(6) {
   overflow: hidden;
 }
 
-ul li:nth-of-type(6) div {
-  position: absolute;
-  bottom: 30%;
-  right: 50%;
-  /*   bottom:-30%; right:0; */
+ul li:nth-of-type(6) > div{
+    position: absolute;
+    bottom:30%; right:30%;
+    bottom:-30%; right:0;
+
+    animation: schietPijl 2s ease-out infinite;
+}
+
+ul li:nth-of-type(6) div div:first-of-type {
   transform: rotate(-20deg);
   width: 20px;
   height: 70px;
-  background-color: red;
-
-  clip-path: polygon(
-    0 32%,
-    53% 0,
-    100% 32%,
-    80% 32%,
-    80% 100%,
-    20% 100%,
-    20% 32%
-  );
+  
+  clip-path: polygon( 0 32%, 53% 0, 100% 32%, 80% 32%  80% 100%, 20% 100%, 20% 32%);
+  
+  /* strepen van: https://css-tricks.com/stripes-css/ */
+  background: repeating-linear-gradient(45deg,lightblue,lightblue 10px,#465298 10px, #465298 20px);
 }
 
-/* ul li:nth-of-type(6):hover div{
-    animation: schiet 2s ease-in-out infinite;
-  } */
+ul li:nth-of-type(6) div div:nth-of-type(2) {
+    width:10px;
+	height:70px;
+	background:linear-gradient(yellow, #35314b);
+	filter:blur(7px);
+    
+    transform: rotate(-20deg) translate(25px, 0px);
+}
 
-@keyframes schiet {
+@keyframes schietPijl {
   0% {
     bottom: -30%;
-    right: 0;
+    right: -20%;
     transform: rotate(-20deg);
   }
   100% {
-    bottom: 60%;
-    right: 80%;
-    transform: rotate(-60deg);
+    bottom: 55%;
+    right: 70%;
+    transform: rotate(-60deg) scale(0);
   }
 }
 
-/* ----------------------------- li 6 -------------------------------*/
-
+/* ----------------------------- li 7 -------------------------------*/
